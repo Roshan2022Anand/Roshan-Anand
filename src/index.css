@@ -33,7 +33,7 @@ body {
 /* tailwind custom classes */
 @layer utilities {
   .contact-text {
-    @apply sm:text-[35px] lg:text-[55px] content-center text-center
+    @apply text-[25px] sm:text-[32px] lg:text-[55px] content-center text-center w-[70%] bg-text-color
   }
 }
 
@@ -51,4 +51,18 @@ h3 {
 
 p {
   font-family: var(--font-p);
+}
+
+.contact-sec {
+  & a:hover {
+    rotate: 2deg;
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 640px) {
+  .main-bento>* {
+    width: 100%;
+    height: 100%;
+  }
 }

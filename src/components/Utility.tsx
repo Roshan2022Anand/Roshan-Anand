@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FaSun } from "react-icons/fa";
+import { FaEye, FaSun } from "react-icons/fa";
+import { IoMdDownload } from "react-icons/io";
 import { IoMoon } from "react-icons/io5";
 
 export const ThemeSection = () => {
@@ -22,18 +23,18 @@ export const ThemeSection = () => {
     root.setProperty("--accent-two-color", "#e1dedb");
   }
   return (
-    <section className="flex bg-accent-one rounded-md p-1">
+    <section className="flex p-1 bg-[#ff701e] rounded-md h-[100px]">
       <button
-        className={`grow  rounded-md ${!isDarkMode && "bg-secondary"}`}
+        className={`grow rounded ${!isDarkMode && "bg-white"}`}
         onClick={() => setisDarkMode(false)}
       >
-        <FaSun className="size-2/3 mx-auto" />
+        <FaSun className="size-2/3 mx-auto text-yellow-400" />
       </button>
       <button
-        className={`grow rounded-md ${isDarkMode && "bg-secondary"}`}
+        className={`grow rounded-md ${isDarkMode && "bg-white"}`}
         onClick={() => setisDarkMode(true)}
       >
-        <IoMoon className="size-2/3 mx-auto" />
+        <IoMoon className="size-2/3 mx-auto text-black" />
       </button>
     </section>
   );
@@ -41,8 +42,14 @@ export const ThemeSection = () => {
 
 export const Resume = () => {
   return (
-    <section className="resume-sec bg-secondary border-2 border-accent-two rounded-md p-1 col-span-2">
-      <p>resume</p>
+    <section className="resume-sec bg-[#ff701e] text-text-color rounded-md p-1 col-span-2 flex items-center justify-between">
+      <h3 className="text-[35px]">resume</h3>
+      <button className="grow h-full">
+        <IoMdDownload className="size-2/3" />
+      </button>
+      <button className="grow h-full">
+        <FaEye className="size-2/3" />
+      </button>
     </section>
   );
 };

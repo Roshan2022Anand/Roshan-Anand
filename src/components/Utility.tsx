@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaSun } from "react-icons/fa";
 import { IoMoon } from "react-icons/io5";
 
-const ThemeSection = () => {
+export const ThemeSection = () => {
   const [isDarkMode, setisDarkMode] = useState(true);
 
   const root = document.documentElement.style;
@@ -22,19 +22,15 @@ const ThemeSection = () => {
     root.setProperty("--accent-two-color", "#e1dedb");
   }
   return (
-    <section className="absolute top-1 right-3 flex bg-accent-two rounded-md p-1 w-1/3">
+    <section className="flex bg-accent-one rounded-md p-1">
       <button
-        className={`grow  rounded-md ${
-          !isDarkMode && "bg-secondary border-2 border-text-color"
-        }`}
+        className={`grow  rounded-md ${!isDarkMode && "bg-secondary"}`}
         onClick={() => setisDarkMode(false)}
       >
         <FaSun className="size-2/3 mx-auto" />
       </button>
       <button
-        className={`grow rounded-md ${
-          isDarkMode && "bg-secondary border-2 border-text-color"
-        }`}
+        className={`grow rounded-md ${isDarkMode && "bg-secondary"}`}
         onClick={() => setisDarkMode(true)}
       >
         <IoMoon className="size-2/3 mx-auto" />
@@ -43,4 +39,10 @@ const ThemeSection = () => {
   );
 };
 
-export default ThemeSection;
+export const Resume = () => {
+  return (
+    <section className="resume-sec bg-secondary border-2 border-accent-two rounded-md p-1 col-span-2">
+      <p>resume</p>
+    </section>
+  );
+};

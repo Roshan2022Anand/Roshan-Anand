@@ -30,10 +30,25 @@ body {
   color: var(--text-color);
 }
 
-img,
-picture,
-svg,
-video {
-  display: block;
-  max-width: 100%;
+/* tailwind custom classes */
+@layer utilities {
+  .contact-text {
+    @apply sm:text-[35px] lg:text-[55px] content-center text-center
+  }
+}
+
+.main-bento {
+  display: grid;
+}
+
+h1 {
+  font-family: var(--font-head);
+}
+
+h3 {
+  font-family: var(--font-accent);
+}
+
+p {
+  font-family: var(--font-p);
 }

@@ -1,17 +1,15 @@
+import BentoSection from "./components/BentoSection";
 import Profile from "./components/Profile";
 import Tech from "./components/Tech";
-import ThemeSection from "./components/Utility";
-// import ThemeSection from "./components/Utility";
 
 const App = () => {
   return (
-    <main className="flex flex-col sm:flex-row h-screen w-screen p-2 max-w-[1100px] mx-auto">
-      <article className="relative flex flex-col justify-around items-center sm:w-1/3 md:w-1/2">
-        <ThemeSection />
+    <main className="flex flex-col sm:flex-row sm:justify-end w-screen mx-auto">
+      <article className="sm:fixed top-1 left-0 h-screen flex flex-col justify-around items-center sm:w-1/3 md:w-1/2">
         <Profile />
         <Tech />
       </article>
-      <article className="grow">s</article>
+      <BentoSection/>
     </main>
   );
 };

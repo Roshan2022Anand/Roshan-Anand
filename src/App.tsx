@@ -4,8 +4,8 @@ import Tech from "./components/Tech";
 
 const App = () => {
   return (
-    <main className="flex flex-col sm:flex-row sm:justify-end w-screen mx-auto">
-      <article className="sm:fixed top-1 left-0 h-screen flex flex-col justify-around items-center sm:w-1/3 md:w-1/2">
+    <main className="flex flex-col items-center lg:flex-row lg:justify-end px-2 mx-auto">
+      <article className="lg:fixed top-1 left-0 h-screen flex flex-col justify-around items-center w-full lg:w-[35%]">
         <Profile />
         <Tech />
       </article>

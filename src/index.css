@@ -24,17 +24,16 @@
 
 html,
 body {
-  width: 100vw;
-  height: 100vh;
   background-color: var(--primary-color);
   color: var(--text-color);
 }
 
-/* tailwind custom classes */
-@layer utilities {
-  .contact-text {
-    @apply text-[25px] sm:text-[32px] lg:text-[55px] content-center text-center w-[70%] bg-text-color
-  }
+.contact-text {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  width: 70%;
+  text-align: center;
+  align-content: center;
+  background-color: var(--text-color);
 }
 
 .main-bento {
@@ -60,7 +59,26 @@ p {
   }
 }
 
-@media (min-width: 640px) {
+
+
+.tech-icon {
+  width: clamp(70px, 10vw, 100px);
+  height: clamp(70px, 10vw, 100px);
+  padding: .5rem;
+  border-radius: 10px;
+}
+
+.tech-txt{
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
+  font-family: var(--font-accent);
+  display: none;
+}
+
+@media (min-width: 768px) {
   .main-bento>* {
     width: 100%;
     height: 100%;

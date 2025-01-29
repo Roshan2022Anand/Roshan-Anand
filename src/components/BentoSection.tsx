@@ -3,7 +3,7 @@ import { Resume, ThemeSection } from "./Utility";
 
 const BentoSection = () => {
   return (
-    <article className="main-bento grid gap-2 grid-cols-1 sm:grid-cols-3 grid-row-5 sm:grid-rows-10 h-[500px] sm:h-[800px] md:h-[1000px] sm:w-2/3 md:w-1/2 mt-2 px-10 sm:px-2">
+    <article className="main-bento grid gap-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-10 lg:h-[85vw] w-full md:w-[80vw] lg:w-[60%] mt-2 px-10 lg:px-2">
       <ThemeSection />
       <Resume />
       <Contact />

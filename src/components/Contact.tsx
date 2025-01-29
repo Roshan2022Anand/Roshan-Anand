@@ -4,8 +4,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 const Contact = () => {
   return (
     <section
-      className="contact-sec text-primary
-h-[300px] sm:col-span-2 sm:row-span-3 flex flex-col"
+      className="contact-sec text-primary h-[300px] md:h-[400px] lg:h-full sm:col-span-2 lg:row-span-3 flex flex-col"
     >
       <article className="flex h-1/3">
         <h3 className="contact-text rounded-xl rounded-br-none">C H E C K</h3>

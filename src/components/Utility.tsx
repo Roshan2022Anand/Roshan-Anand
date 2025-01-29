@@ -42,7 +42,7 @@ export const ThemeSection = () => {
 
 export const Resume = () => {
   return (
-    <section className="resume-sec bg-[#ff701e] text-text-color rounded-md p-1 col-span-2 flex items-center justify-between">
+    <section className="resume-sec bg-[#ff701e] text-white rounded-md p-1 sm:col-span-1 lg:col-span-2 flex items-center justify-between">
       <h3 className="text-[35px]">resume</h3>
       <button className="grow h-full">
         <IoMdDownload className="size-2/3" />

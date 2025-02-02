@@ -1,14 +1,11 @@
-import Contact from "./Contact";
-import { Resume, ThemeSection } from "./Utility";
+import Tech from "./Tech";
+import { Resume } from "./Utility";
 
-const BentoSection = () => {
+export const BentoSectionOne = () => {
   return (
-    <article className="main-bento grid gap-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-10 lg:h-[85vw] w-full md:w-[80vw] lg:w-[60%] mt-2 px-10 lg:px-2">
-      <ThemeSection />
+    <article className="main-bento grid gap-2 grid-cols-3 grid-rows-10 h-screen w-full md:w-[80vw] lg:w-[60%] mt-2 px-10 lg:px-2">
       <Resume />
-      <Contact />
+      <Tech />
     </article>
   );
 };
-
-export default BentoSection;

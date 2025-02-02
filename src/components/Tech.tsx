@@ -7,51 +7,58 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import { motion } from "motion/react";
+
+const icons = [
+  {
+    Component: SiTypescript,
+    color: "#3178c6",
+    animate: { opacity: 1, top: "10%", left: "50%" },
+  },
+  {
+    Component: FaReact,
+    color: "#61DBFB",
+    animate: { opacity: 1, top: "25%", left: "70%" },
+  },
+  // { Component: SiNextdotjs, color: "#FFFFFF" },
+  // { Component: SiPostgresql, color: "#32678f" },
+  // { Component: SiExpress, color: "#FFFFFF" },
+  // { Component: FaNodeJs, color: "#3C873A" },
+  // { Component: SiMongodb, color: "#4DB33D" },
+  // { Component: SiTailwindcss, color: "#38BDF8" },
+];
+
+const duration = 1.5; // Animation duration
 
 const Tech = () => {
   return (
-    <section className="tech-sec w-full h-[50vh] flex flex-wrap justify-evenly items-end gap-1">
-      {/* TypeScript */}
-      <div className="size-fit relative group bg-white rounded-[10px]">
-        <SiTypescript className="text-[#3178c6] tech-icon" />
-        <span className="tech-txt group-hover:block ">TypeScript</span>
-      </div>
-
-      {/* React */}
-      <div className="size-fit relative group">
-        <FaReact className="text-blue-400 bg-text-color tech-icon" />
-        <span className="tech-txt group-hover:block ">React</span>
-      </div>
-      {/* Next.js */}
-      <div className="size-fit relative group">
-        <SiNextdotjs className="text-primary bg-text-color tech-icon" />
-        <span className="tech-txt group-hover:block ">Next.js</span>
-      </div>
-      {/* PostgreSQL */}
-      <div className="size-fit relative group">
-        <SiPostgresql className="tech-icon bg-[#32678f] text-white" />
-        <span className="tech-txt group-hover:block ">PostgreSQL</span>
-      </div>
-      {/* Express */}
-      <div className="size-fit relative group">
-        <SiExpress className="tech-icon bg-text-color text-primary" />
-        <span className="tech-txt group-hover:block ">Express</span>
-      </div>
-      {/* Node.js */}
-      <div className="size-fit relative group">
-        <FaNodeJs className="text-green-500 bg-text-color tech-icon" />
-        <span className="tech-txt group-hover:block ">Node.js</span>
-      </div>
-      {/* MongoDB */}
-      <div className="size-fit relative group">
-        <SiMongodb className="text-green-400 bg-text-color tech-icon" />
-        <span className="tech-txt group-hover:block ">MongoDB</span>
-      </div>
-      {/* Tailwind CSS */}
-      <div className="size-fit relative group">
-        <SiTailwindcss className="text-cyan-400 bg-text-color tech-icon" />
-        <span className="tech-txt group-hover:block ">Tailwind</span>
-      </div>
+    <section className="relative col-span-3 row-span-6">
+      <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        🧠
+      </h1>
+      <article
+        className="tech-logo-sec border-2 size-full rounded-full relative"
+        // animate={{ rotate: 360 }}
+        // transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+      >
+        {icons.map(({ Component, color, animate }, index) => {
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, top: "50%", left: "50%" }}
+              animate={animate}
+              transition={{ delay: 0.2 * index, duration }}
+              className="absolute"
+              style={{
+                color,
+                transform: `translate(-50%, -50%)`,
+              }}
+            >
+              <Component className="icon-md" />
+            </motion.div>
+          );
+        })}
+      </article>
     </section>
   );
 };
